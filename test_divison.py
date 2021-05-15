@@ -5,8 +5,8 @@ from Calculator import Calculator
 
 def test_for_positive_numbers():
     calc = Calculator()
-    result = calc.division(9, 10)
-    assert result == 0.9
+    result = calc.division(10, 10)
+    assert result == 1
 
 
 def test_for_decimal():
