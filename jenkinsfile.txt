@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pulling automation repository') {
+            steps {
+               git credentialsId: 'githubCred', url:'https://github.com/Urvashi-Srivastava/calculator-pytest.git'
+            }
+        }
+    }
+}
