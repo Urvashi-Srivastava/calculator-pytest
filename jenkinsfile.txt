@@ -6,5 +6,10 @@ pipeline {
                git credentialsId: 'githubCred', url:'https://github.com/Urvashi-Srivastava/calculator-pytest.git'
             }
         }
+        stage('Executing Tests') {
+            steps {
+               sh 'python -m pytest --html=./Reports/LoginTestCasesWithValidCredentialJenkins.html -v'
+            }
+        }
     }
 }
